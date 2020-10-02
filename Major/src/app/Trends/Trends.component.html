@@ -1,0 +1,138 @@
+<div *ngIf="show">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-5">
+  <ul class="navbar-nav ">
+   
+    <li class="nav-item">
+      <a class="nav-link" routerLink ="/Trends">Trending</a>
+    </li>
+
+     <li class="nav-item ">
+      <a class="nav-link" routerLink ="/Profile" >Profile</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" routerLink ="/blogger">Blogging</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto ">
+    <li class="nav-item ">
+      <a class="nav-link" routerLink ="/home" > <button  class=" btn btn-dark" (click)="logout()">Log-Out</button></a>
+    </li>
+  </ul>
+</nav>
+</div>
+<div *ngIf="!show">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark mb-5">
+  <ul class="navbar-nav ">
+   
+    <li class="nav-item">
+      <a class="nav-link" routerLink ="/Trends">Trending</a>
+    </li>
+
+     <li class="nav-item ">
+      <a class="nav-link" routerLink ="/home" >HOME</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" routerLink ="/login">LOGIN</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" routerLink ="/signup-form">SIGN UP</a>
+    </li>
+  </ul>
+  
+</nav>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<title>Trends</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 100px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Category</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Adventure Trips</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Historical places</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Devine soul</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Awesome Landscapes</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <img opacity=0.9 src="back1.jpg" alt="no-image" width="500px">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">One Mile At A Time</h1>
+      <p>Jaipur was founded in 1727 by the Rajput ruler Jai Singh II, the ruler of Amer, after whom the city is named. It was one of the earliest planned cities of modern India, designed by Vidyadhar Bhattacharya. During the British Colonial period, the city served as the capital of Jaipur State. After independence in 1947, Jaipur was made capital of the newly-formed state of Rajasthan.Jaipur is a popular tourist destination in India and forms a part of the west Golden Triangle tourist circuit along with Delhi and Agra (240 km, 149 mi).It also serves as a gateway to other tourist destinations in Rajasthan such as Jodhpur (348 km, 216 mi), Jaisalmer (571 km, 355 mi), Udaipur (421 km, 262 mi), Kota (252 km, 156 mi) and Mount Abu (520 km, 323 mi). Jaipur is located 616 km from Shimla.</p>
+    </div>
+  </div>
+
+  <div class="w3-row">
+     <img opacity=0.9 src="back2.jpg" alt="no-image" width="500px">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Pause the Moment</h1>
+      <p>Udaipur also known as the "City of Lakes", is a city in the state of Rajasthan in India. It is the historic capital of the kingdom of Mewar in the former Rajputana Agency. It was founded in 1558 by Maharana Udai Singh II of the Sisodia clan of Rajput, when he shifted his capital from the city of Chittorgarh to Udaipur after Chittorgarh was besieged by Akbar. It remained as the capital city till 1818 when it became a British princely state, and thereafter the Mewar province became a part of Rajasthan when India gained independence in 1947.The city is located in the southernmost part of Rajasthan, near the Gujarat border. It is  placed almost in the middle of two major Indian metro cities. Besides, connectivity with Gujarat ports provide Udaipur a strategic geographical advantage. Udaipur is well connected with nearby cities and states by means of road, rail and air transportation facilities, including Maharana Pratap Airport. Common languages spoken include Hindi, English and Rajasthani (Mewari).</p>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <img opacity=0.9 src="back3.jpg" alt="no-image" width="500px" >
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Just Travelous</h1>
+      <p>The United States of America (USA), commonly known as the United States (U.S. or US) or simply America, is a country comprising 50 states, a federal district, five major self-governing territories, and various possessions. At 3.8 million square miles (9.8 million km2), it is the world's third or fourth largest country by total area and is slightly smaller than the entire continent of Europe. Most of the country is located in central North America between Canada and Mexico. With an estimated population of over 327 million people, the U.S. is the third most populous country. The capital is Washington, D.C., and the most populous city is New York City. Numerous disputes between Great Britain and the colonies led to the American Revolutionary War lasting between 1775 and 1783, leading to independence. The United States embarked on a vigorous expansion across North America throughout the 19th century, gradually acquiring new territories.[</p>
+    </div>
+  </div>
+
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

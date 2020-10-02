@@ -1,0 +1,48 @@
+<div class="image">
+ <!-- <nav class="navbar navbar-expand-sm bg  mb-5">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item ">
+      <a class="nav-link" routerLink ="/Profile" style="color: grey">PROFILE</a>
+    </li>
+  </ul>
+</nav>
+-->
+ <form (ngSubmit)="onBlog()" action="/Blog" method="post">
+<div class="center">
+  Enter the place 
+  <br>
+  <textarea name="place"  [(ngModel)]="blogger.place"  rows="2" cols="50">
+
+   </textarea> 
+
+
+</div>
+<br>
+   <div class="center">
+  Description:
+  <br>
+  <textarea [(ngModel)]="blogger.description"  name="description" rows="3" cols="100">
+
+   </textarea>  
+</div>
+
+<br>
+
+<div class="center">
+
+  BLOG:
+  <br>
+  <textarea  [(ngModel)]="blogger.blog" name="blog" rows="6" cols="100">
+
+   </textarea> 
+ </div>
+
+   <button type="submit"  class="btn btn-success" >Submit</button>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!--<button type="button" class="btn btn-info" onclick="goBack()">Back</button> -->
+
+
+
+
+</form>
+</div>

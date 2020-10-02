@@ -1,0 +1,13 @@
+.form-container{
+	background: #0110;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px #000; 
+}
+.image{
+     height:40em; background-size:cover; width:auto;
+     background-image:url('https://images.pexels.com/photos/2108813/pexels-photo-2108813.jpeg?cs=srgb&dl=adventure-classical-guitar-classical-music-2108813.jpg&fm=jpg');
+     background-position:70% 70%;
+   }
+
+   

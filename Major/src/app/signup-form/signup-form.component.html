@@ -1,0 +1,139 @@
+<!--<div [hidden]="submitted">
+    <h1>Sign Up Form</h1>
+       <form #animalform="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required
+        [(ngModel)]="user.name" name="name" placeholder="full name">
+      </div>
+ 
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select [(ngModel)]="user.gender" name="gender">
+          <option *ngFor="let g of gender" [value]="g">{{g}}</option>
+        </select>
+      </div>
+
+
+  <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age" required 
+        [(ngModel)]="user.age" name="age"
+         placeholder="age">
+      </div>
+     <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" required [(ngModel)]="user.username" name="username"
+         placeholder="example: jainutkarsh567">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password"
+         placeholder="min. 8 character">
+      </div>
+      <div class="form-group">
+        <label for="cnfpassword">Confirm-Password</label>
+        <input type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password"
+         placeholder="same as above">
+      </div>
+ 
+      <button type="submit" class="btn btn-success" [disabled]="!animalform.form.valid">Submit</button>
+  </form>
+</div>
+<div [hidden]="!submitted">
+  <form (ngSubmit)="onSignUp()" action="/Add" method="post">
+  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-9"><input  [(ngModel)]="user.name" name="name"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Username</div>
+    <div class="col-xs-9"><input [(ngModel)]="user.username" name="username"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Age</div>
+    <div class="col-xs-9"><input [(ngModel)]="user.age" name="age"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Gender</div>
+    <div class="col-xs-9"><input [(ngModel)]="user.gender" name="gender"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Password</div>
+    <div class="col-xs-9"><input [(ngModel)]="user.password" name="password"></div>
+  </div>
+  
+  <br>
+  <button class="btn btn-primary" (click)="submitted=false">Edit</button> 
+  <button type="submit" class="btn btn-primary"  style='margin-left:300px'>Sign Up</button>
+</form>
+</div>-->
+<div class="image">
+<nav class="navbar navbar-expand-sm bg  mb-5">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item ">
+      <a class="nav-link" routerLink ="/home" style="color: grey">HOME</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" routerLink ="/login" style="color: grey">LOGIN</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" routerLink ="/signup-form" style="color: grey">SIGN-UP</a>
+    </li>
+  </ul>
+</nav>
+
+
+<section class="container-fluid bg">
+  <section class="row justify-content-center">
+    <section class="col-12 col-sm-6 col-md-3">
+      <form class="login100-form validate-form form-container" (ngSubmit)="onSignUp()" action="/Add" method="post">
+         
+        <div class="form-group w-100  ">
+        <label for="user.name " style="color: white" >Name</label>
+        <input type="text" class="form-control text-white bg-dark text-white" [(ngModel)]="user.name" name="name" required
+         placeholder="example: Utkarsh Jain" autocomplete="off"  >
+      </div>
+     
+      <div class="form-group ">
+        <label for="user.age " style="color: white">Age</label>
+        <input type="text" class="form-control text-white bg-dark" [(ngModel)]="user.age" name="age"  required
+         placeholder="example: 21" autocomplete="off"  >
+      </div>
+      <div class="form-group ">
+        <label for="user.age " style="color: white">Gender</label>
+       <select name="gender" class="  bg-dark text-white form-control mb-2" [(ngModel)]="user.gender" name="gender" >
+          <option disabled="disabled" selected="selected" style="color: white" >Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+      </select>
+    </div>
+    
+    
+
+      <div class="form-group w-100  ">
+        <label for="user.username " style="color: white">Username</label>
+        <input type="text" class="form-control bg-dark text-white" [(ngModel)]="user.username" name="username" required
+         placeholder="example: jainutkarsh567" autocomplete="off"  >
+      </div>
+ 
+      <div class="form-group w-100   mb-3">
+        <label for="user.password" style="color: white">Password</label>
+        <input type="password" class="form-control text-white bg-dark" [(ngModel)]="user.password" name="password" required
+         placeholder="min. 8 character" autocomplete="off"  >
+      </div>
+      
+      
+      <button type="submit" class="btn btn-success btn-block ">Submit</button>
+
+          
+        </form>
+
+    </section>
+  </section>
+  
+</section>
+</div>
